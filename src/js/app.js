@@ -36,11 +36,11 @@ function render(variables = {}) {
           <h1>${variables.name} ${variables.lastName}</h1>
           <h2>${variables.role}</h2>
           <h3>${variables.city} ${variables.country}</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <ul class="${variables.socialMediaPosition}">
+            <li><a href="${variables.twitter}"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="${variables.github}"><i class="fab fa-github"></i></a></li>
+            <li><a href="${variables.linkedin}"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="${variables.instagram}"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -64,11 +64,11 @@ window.onload = function() {
     github: null,
     linkedin: null,
     instagram: null,
-    name: null,
-    lastName: null,
-    role: null,
-    country: null,
-    city: null
+    name: "Jane",
+    lastName: "doe",
+    role: "Role",
+    country: "Country",
+    city: "City"
   };
   render(window.variables); // render the card for the first time
 
